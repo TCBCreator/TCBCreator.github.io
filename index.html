@@ -95,7 +95,7 @@
      Kompakt gehalten: wer scrollt, ist nach wenigen Sekunden bei den Filmen. */
   .intro{
     position:relative; overflow:hidden;
-    padding:clamp(52px,8vw,88px) 0 clamp(44px,6vw,68px);
+    padding:clamp(40px,6vw,64px) 0 clamp(28px,4vw,40px);
   }
   .intro::before{content:none}
   .intro .wrap{position:relative; z-index:1}
@@ -104,6 +104,7 @@
     color:var(--muted); font-size:clamp(15px,1.8vw,18px);
     margin:12px 0 0; font-weight:500;
   }
+  .tagline{margin:22px 0 0; color:var(--text); font-size:clamp(17px,2vw,21px); max-width:56ch}
   .intro-text{margin-top:30px; max-width:64ch}
   .intro-text p{color:var(--muted); font-size:clamp(16px,1.8vw,18px); margin:0}
   .intro-text p + p{margin-top:16px}
@@ -121,7 +122,26 @@
   .btn-ghost:hover{border-color:var(--text)}
 
   /* ---------- 4. AWARD-LEISTE ---------- */
-  .awards{padding:20px 0 0; background:var(--bg)}
+  .awards{padding:6px 0 0; background:var(--bg)}
+  .laurels{
+    list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap;
+    gap:18px 6px; justify-content:flex-start;
+  }
+  .laurel{display:flex; align-items:center; gap:2px; color:var(--text); opacity:.9}
+  .laurel .lf{width:22px; height:56px; flex:none}
+  .laurel .lf.flip{transform:scaleX(-1)}
+  .laurel span{display:flex; flex-direction:column; align-items:center; text-align:center; min-width:120px; padding:0 4px}
+  .laurel small{font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); line-height:1.3; margin-bottom:3px}
+  .laurel b{font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; font-weight:700; line-height:1.2}
+  .awards .laurels{justify-content:flex-start}
+  @media(max-width:760px){
+    .awards .laurels{display:grid; grid-template-columns:1fr 1fr; gap:10px 4px}
+    .laurel{justify-content:center}
+    .laurel span{min-width:0; padding:0 2px}
+    .laurel small{font-size:8px}
+    .laurel b{font-size:11.5px}
+    .laurel .lf{width:16px;height:44px}
+  }
   .awards ul{
     list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap;
     gap:14px 44px; justify-content:center;
@@ -131,7 +151,7 @@
 
   /* ---------- 5. PORTFOLIO-GRID ---------- */
   .grid{
-    display:grid; gap:23px; margin-top:30px;
+    display:grid; gap:23px; margin-top:30px; grid-auto-flow:row dense;
     grid-template-columns:repeat(auto-fill,minmax(min(100%,430px),1fr));
   }
   /* ---------- FILTER-LEISTE ----------
@@ -252,52 +272,70 @@
     <button class="nav-toggle" aria-label="Menü" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
     <ul class="nav-links">
       <li><a href="#work">Work</a></li>
-      <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 </header>
 
-<!-- ================= EINSTIEG ================= -->
+<!-- ================= EINSTIEG =================
+     Bewusst kurz. Wer die Seite öffnet, soll in Sekunden bei den Filmen sein. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="laurel" viewBox="0 0 40 100"><path d="M22 98 Q6 60 26 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><ellipse cx="19.4" cy="90.9" rx="7.5" ry="2.9" transform="rotate(-155.0 19.4 90.9) translate(6.8 0)" fill="currentColor"/><ellipse cx="19.4" cy="90.9" rx="7.5" ry="2.9" transform="rotate(-59.0 19.4 90.9) translate(6.8 0)" fill="currentColor"/><ellipse cx="16.9" cy="82.1" rx="7.2" ry="2.7" transform="rotate(-160.3 16.9 82.1) translate(6.4 0)" fill="currentColor"/><ellipse cx="16.9" cy="82.1" rx="7.2" ry="2.7" transform="rotate(-64.3 16.9 82.1) translate(6.4 0)" fill="currentColor"/><ellipse cx="15.2" cy="73.2" rx="6.8" ry="2.6" transform="rotate(-165.6 15.2 73.2) translate(6.1 0)" fill="currentColor"/><ellipse cx="15.2" cy="73.2" rx="6.8" ry="2.6" transform="rotate(-69.6 15.2 73.2) translate(6.1 0)" fill="currentColor"/><ellipse cx="14.3" cy="64.0" rx="6.5" ry="2.5" transform="rotate(-172.5 14.3 64.0) translate(5.8 0)" fill="currentColor"/><ellipse cx="14.3" cy="64.0" rx="6.5" ry="2.5" transform="rotate(-76.5 14.3 64.0) translate(5.8 0)" fill="currentColor"/><ellipse cx="14.3" cy="54.6" rx="6.1" ry="2.3" transform="rotate(179.1 14.3 54.6) translate(5.5 0)" fill="currentColor"/><ellipse cx="14.3" cy="54.6" rx="6.1" ry="2.3" transform="rotate(-84.9 14.3 54.6) translate(5.5 0)" fill="currentColor"/><ellipse cx="15.2" cy="44.8" rx="5.8" ry="2.2" transform="rotate(167.6 15.2 44.8) translate(5.2 0)" fill="currentColor"/><ellipse cx="15.2" cy="44.8" rx="5.8" ry="2.2" transform="rotate(-96.4 15.2 44.8) translate(5.2 0)" fill="currentColor"/><ellipse cx="17.0" cy="34.9" rx="5.4" ry="2.1" transform="rotate(153.5 17.0 34.9) translate(4.9 0)" fill="currentColor"/><ellipse cx="17.0" cy="34.9" rx="5.4" ry="2.1" transform="rotate(-110.5 17.0 34.9) translate(4.9 0)" fill="currentColor"/><ellipse cx="19.5" cy="24.6" rx="5.0" ry="1.9" transform="rotate(138.4 19.5 24.6) translate(4.5 0)" fill="currentColor"/><ellipse cx="19.5" cy="24.6" rx="5.0" ry="1.9" transform="rotate(-125.6 19.5 24.6) translate(4.5 0)" fill="currentColor"/></symbol></defs></svg>
+
 <section class="intro" id="top">
   <div class="wrap">
-    <p class="eyebrow">Dubai · United Arab Emirates</p>
     <h1>Patrick Hoffmann</h1>
-    <p class="role">Writer, Director &amp; Creative Producer</p>
-
-    <div class="intro-text">
-      <p>
-        Ten years making films, the last five leading productions end to end.
-        Agency-level campaigns for <strong>P&amp;G, Garmin and HELLA</strong> in Germany,
-        and documentary work in the UAE for <strong>ALEC</strong> on the Khazna Data Center,
-        the Wynn Al Marjan Resort and Sphere.
-      </p>
-      <p>
-        What I bring to a team is the combination that is hard to hire for. Creative direction
-        on one side, and on the other the production discipline that actually gets films
-        delivered. Budgets, permits, stakeholder alignment, shooting inside restricted sites,
-        and a camera in my own hands when the schedule demands it.
-      </p>
-      <p>
-        <strong>Based in Dubai. Open to senior roles where both halves get used.</strong>
-      </p>
-    </div>
-
-    <div class="cta-row">
-      <a href="#work" class="btn btn-primary">See the work</a>
-      <a href="#contact" class="btn btn-ghost">Get in touch</a>
-    </div>
+    <p class="role">Writer, Director &amp; Creative Producer · Dubai</p>
+    <p class="tagline">Ten years of making films. Still in it for the love of the game.</p>
   </div>
 </section>
 
+<!-- ================= AWARDS =================
+     Reihenfolge nach Gewicht. Neuer Award: einen li-Block kopieren,
+     Festival in small, Stufe in b eintragen. -->
 <div class="awards">
   <div class="wrap">
-    <ul>
-      <li><b>NYX</b> Grand Award for Directing</li>
-      <li><b>World Media Festival</b> Gold ×2</li>
-      <li><b>Cannes Corporate</b> Finalist</li>
-      <li><b>10+ Years</b> Behind the Camera</li>
+    <ul class="laurels reveal">
+      <li class="laurel">
+        <svg class="lf" aria-hidden="true"><use href="#laurel"/></svg>
+        <span><small>NYX Video Awards 2022</small><b>Grand Winner</b></span>
+        <svg class="lf flip" aria-hidden="true"><use href="#laurel"/></svg>
+      </li>
+      <li class="laurel">
+        <svg class="lf" aria-hidden="true"><use href="#laurel"/></svg>
+        <span><small>World Media Festivals 2025</small><b>Gold</b></span>
+        <svg class="lf flip" aria-hidden="true"><use href="#laurel"/></svg>
+      </li>
+      <li class="laurel">
+        <svg class="lf" aria-hidden="true"><use href="#laurel"/></svg>
+        <span><small>NYX Awards 2023</small><b>Gold</b></span>
+        <svg class="lf flip" aria-hidden="true"><use href="#laurel"/></svg>
+      </li>
+      <li class="laurel">
+        <svg class="lf" aria-hidden="true"><use href="#laurel"/></svg>
+        <span><small>Cannes Corporate Media &amp; TV Awards 2022</small><b>Finalist</b></span>
+        <svg class="lf flip" aria-hidden="true"><use href="#laurel"/></svg>
+      </li>
+      <li class="laurel">
+        <svg class="lf" aria-hidden="true"><use href="#laurel"/></svg>
+        <span><small>World Media Festivals 2025</small><b>Silver</b></span>
+        <svg class="lf flip" aria-hidden="true"><use href="#laurel"/></svg>
+      </li>
+      <li class="laurel">
+        <svg class="lf" aria-hidden="true"><use href="#laurel"/></svg>
+        <span><small>World Media Festivals 2023</small><b>Silver</b></span>
+        <svg class="lf flip" aria-hidden="true"><use href="#laurel"/></svg>
+      </li>
+      <li class="laurel">
+        <svg class="lf" aria-hidden="true"><use href="#laurel"/></svg>
+        <span><small>US International Awards 2024</small><b>Silver</b></span>
+        <svg class="lf flip" aria-hidden="true"><use href="#laurel"/></svg>
+      </li>
+      <li class="laurel">
+        <svg class="lf" aria-hidden="true"><use href="#laurel"/></svg>
+        <span><small>New York Festivals 2022</small><b>Bronze</b></span>
+        <svg class="lf flip" aria-hidden="true"><use href="#laurel"/></svg>
+      </li>
     </ul>
   </div>
 </div>
@@ -306,11 +344,6 @@
 <section id="work">
   <div class="wrap">
     <p class="eyebrow reveal">Selected Work</p>
-    <h2 class="reveal">Films that hold up when the stakes are real.</h2>
-    <p class="lead reveal">
-      From large-scale construction documentaries in the UAE to global campaigns
-      for Fortune 500 brands.
-    </p>
 
     <!-- ============================================================
          FILTER-LEISTE
@@ -335,24 +368,34 @@
          ============================================================ -->
     <div class="grid" id="workGrid">
 
-      <!-- --- Laufende Produktionen (ALEC, UAE) --- -->
-
-      
-
-      
-
-      
-
-      
-
-      
-
       <article class="card reveal" data-cat="documentary">
         <div class="player" data-src="https://player.vimeo.com/video/1219015438?h=c820be0333&title=0&byline=0&portrait=0&dnt=1" data-title="UDO! — Trailer"></div>
         <div class="card-body">
           <span class="tag">Documentary</span>
           <h3>UDO!</h3>
           <p class="meta">Trailer · Gold, Documentary · Creative Producer</p>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="commercial">
+        <div class="player" data-src="https://player.vimeo.com/video/1219012992?h=8f929a4345&title=0&byline=0&portrait=0&dnt=1" data-title="Cloud of Legacy — Peace of Mind"></div>
+        <div class="card-body">
+          <span class="tag">Brand Film</span>
+          <h3>Cloud of Legacy</h3>
+          <p class="meta">Peace of Mind, English · Cannes Corporate Finalist · Writer / Director</p>
+        </div>
+      </article>
+
+      <!-- Vimeo-Showcase mit allen 12 Clips der Kampagne, kein einzelnes Video.
+           Deshalb card-wide: die Galerie braucht mehr Platz als eine Kachel.
+           PRÜFEN: Gehört der Silver Award (Social Media Campaign) zu dieser
+           Kampagne? Falls ja, unten in .meta ergänzen. -->
+      <article class="card card-wide reveal" data-cat="commercial">
+        <div class="player" data-src="https://vimeo.com/showcase/12371360/embed" data-title="HELLA — We Got That 2.0, social media campaign"></div>
+        <div class="card-body">
+          <span class="tag">Social Campaign</span>
+          <h3>HELLA · We Got That 2.0</h3>
+          <p class="meta">Social media campaign, 12 films · Writer / Director</p>
         </div>
       </article>
 
@@ -364,6 +407,18 @@
           <p class="meta">Gold, World Media Festival · Writer / Director</p>
         </div>
       </article>
+
+      <!-- --- Laufende Produktionen (ALEC, UAE) --- -->
+
+      
+
+      
+
+      
+
+      
+
+      
 
       <article class="card reveal" data-cat="commercial">
         <div class="player" data-src="https://player.vimeo.com/video/1219016268?title=0&byline=0&portrait=0&dnt=1" data-title="P&amp;G Ariel — Turn It Down, TVC 1"></div>
@@ -384,33 +439,11 @@
       </article>
 
       <article class="card reveal" data-cat="commercial">
-        <div class="player" data-src="https://player.vimeo.com/video/1219012992?h=8f929a4345&title=0&byline=0&portrait=0&dnt=1" data-title="Cloud of Legacy — Peace of Mind"></div>
-        <div class="card-body">
-          <span class="tag">Brand Film</span>
-          <h3>Cloud of Legacy</h3>
-          <p class="meta">Peace of Mind, English · Cannes Corporate Finalist · Writer / Director</p>
-        </div>
-      </article>
-
-      <article class="card reveal" data-cat="commercial">
         <div class="player" data-src="https://player.vimeo.com/video/1219012575?title=0&byline=0&portrait=0&dnt=1" data-title="Cloud of Legacy — Peace of Mind (DE)"></div>
         <div class="card-body">
           <span class="tag">Brand Film</span>
           <h3>Cloud of Legacy</h3>
           <p class="meta">Peace of Mind, German · Writer / Director</p>
-        </div>
-      </article>
-
-      <!-- Vimeo-Showcase mit allen 12 Clips der Kampagne, kein einzelnes Video.
-           Deshalb card-wide: die Galerie braucht mehr Platz als eine Kachel.
-           PRÜFEN: Gehört der Silver Award (Social Media Campaign) zu dieser
-           Kampagne? Falls ja, unten in .meta ergänzen. -->
-      <article class="card card-wide reveal" data-cat="commercial">
-        <div class="player" data-src="https://vimeo.com/showcase/12371360/embed" data-title="HELLA — We Got That 2.0, social media campaign"></div>
-        <div class="card-body">
-          <span class="tag">Social Campaign</span>
-          <h3>HELLA · We Got That 2.0</h3>
-          <p class="meta">Social media campaign, 12 films · Writer / Director</p>
         </div>
       </article>
 
@@ -587,63 +620,21 @@
   </div>
 </section>
 
-<!-- ================= SERVICES ================= -->
-<section id="services">
-  <div class="wrap">
-    <p class="eyebrow reveal">What I do</p>
-    <h2 class="reveal">Four things, done properly.</h2>
-    <p class="lead reveal">
-      Concept to final grade. One point of contact, no handover losses.
-    </p>
-
-    <div class="services">
-      <div class="service reveal">
-        <span class="num">01</span>
-        <h3>Brand &amp; Image Films</h3>
-        <p>Films that carry a brand rather than describe it, for companies, developers, schools and cultural institutions. Treatment, production, direction, delivery.</p>
-      </div>
-      <div class="service reveal">
-        <span class="num">02</span>
-        <h3>Documentary</h3>
-        <p>Long-form and short-form documentary in demanding environments: active construction sites, high-security facilities, multi-stakeholder projects.</p>
-      </div>
-      <div class="service reveal">
-        <span class="num">03</span>
-        <h3>Self-Shooting Direction</h3>
-        <p>Trained camera operator with professional kit. Small footprint, fast turnaround, no waiting on a crew for interviews, portraits and reactive shoots.</p>
-      </div>
-      <div class="service reveal">
-        <span class="num">04</span>
-        <h3>Creative Production</h3>
-        <p>Budgets, scheduling, permits, stakeholder alignment. Plus a vetted network of senior DOPs and editors, assembled in days when a project needs scale.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ================= ABOUT ================= -->
 <section id="about">
   <div class="wrap">
     <p class="eyebrow reveal">About</p>
-    <h2 class="reveal">I started behind the camera. I never left.</h2>
+    <h2 class="reveal">Behind the camera since day one.</h2>
 
     <div class="about-grid">
       <div class="about-text reveal">
         <p>
-          I began over ten years ago as a camera assistant on feature films. That is why
-          direction and logistics have never been two separate jobs to me. I learned both
-          from the floor up, and I still shoot when a project is better served by one person
-          than by five.
+          I started as a camera assistant on feature films and never really left the set.
+          Today I write, direct and produce, and when a project is better served by one
+          person than by five, I pick up the camera myself.
         </p>
         <p>
-          In practice that means fewer handovers and faster decisions. Treatment, budget,
-          schedule, permits, direction, delivery: one point of contact from the first call to
-          the final grade. When a project needs scale, I bring in a vetted network of senior
-          DOPs and editors within days.
-        </p>
-        <p>
-          I also work with AI tools in production, generative video and image as well as
-          workflow automation, to save time and budget without losing craft.
+          Ten years in, a good brief still gets me up early.
         </p>
       </div>
 
@@ -666,8 +657,7 @@
     <p class="eyebrow reveal">Contact</p>
     <h2 class="reveal">Let's talk.</h2>
     <p class="lead reveal">
-      Whether it is a role or a project, write me a few lines about what you need
-      and when. You get a straight answer.
+      A role, a project, or just a question. Write me a few lines, you get a straight answer.
     </p>
     <div class="contact-links reveal">
       <a href="mailto:patrick.hoffmann@tcbcreation.com">patrick.hoffmann@tcbcreation.com</a>
