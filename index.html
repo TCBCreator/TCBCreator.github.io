@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Patrick Hoffmann · Creative Producer &amp; Director, Dubai</title>
+<meta name="description" content="Senior Creative Producer and self-shooting director based in Dubai. Ten years of brand films and documentary for P&amp;G, Garmin, HELLA, plus large-scale UAE work for ALEC. NYX Grand Award for Directing.">
+
+<!-- Vorschau beim Teilen (LinkedIn, WhatsApp).
+     og:url und og:image zeigen auf die Live-Adresse. Bei eigener Domain
+     beide Zeilen und twitter:image auf die neue Adresse ändern. -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Patrick Hoffmann · Creative Producer &amp; Director, Dubai">
+<meta property="og:description" content="Ten years making films. Creative direction plus the production discipline that gets films delivered. Based in Dubai.">
+<meta property="og:url" content="https://tcbcreator.github.io/">
+<meta property="og:image" content="https://tcbcreator.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tcbcreator.github.io/og-image.png">
+<link rel="canonical" href="https://tcbcreator.github.io/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+  /* ---------- 1. FARBEN & GRUNDWERTE ----------
+     Willst du eine andere Farbwelt? Ändere nur diese Zeilen. */
+  :root{
+    --bg:        #000000;   /* Hintergrund, reines Schwarz */
+    --bg-soft:   #0e0e10;   /* abgesetzte Flächen, sehr sparsam */
+    --line:      #1c1c1f;   /* Trennlinien, kaum sichtbar */
+    --text:      #dad7d4;   /* Haupttext, warmes Off-White */
+    --muted:     #77746f;   /* Nebentext */
+    --accent:    #dad7d4;   /* bewusst keine Akzentfarbe */
+    --max:       1560px;    /* max. Seitenbreite, Filme dürfen groß sein */
+    --radius:    14px;      /* Rundung der Videokacheln */
+    --pad:       clamp(18px, 3vw, 40px);
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:"Archivo",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+    font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  img,video{max-width:100%; display:block}
+  a{color:inherit}
+
+  .wrap{max-width:var(--max); margin:0 auto; padding-left:var(--pad); padding-right:var(--pad)}
+  section{padding:clamp(56px,8vw,104px) 0}
+  #work{padding-top:clamp(28px,4vw,48px)}
+
+  h1,h2,h3{line-height:1.1; letter-spacing:-0.02em; font-weight:600; margin:0}
+  h2{font-size:clamp(28px,4.5vw,44px); margin-bottom:14px}
+  .eyebrow{
+    font-size:11px; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--muted); margin-bottom:16px; font-weight:600;
+  }
+  .lead{color:var(--muted); font-size:clamp(17px,2vw,20px); max-width:62ch}
+
+  /* ---------- 2. NAVIGATION ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(0,0,0,.72); backdrop-filter:blur(14px);
+  }
+  .nav{display:flex; align-items:center; justify-content:space-between; height:62px}
+  .logo{
+    font-style:italic; font-weight:700; letter-spacing:.01em;
+    text-decoration:none; font-size:19px; color:var(--text);
+  }
+  .logo span{color:var(--text)}
+  .nav-links{display:flex; gap:34px; list-style:none; margin:0; padding:0}
+  .nav-links a{
+    text-decoration:none; font-size:12px; font-weight:600;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--text);
+    opacity:.8; transition:opacity .2s;
+  }
+  .nav-links a:hover{opacity:1}
+  .nav-toggle{display:none; background:none; border:0; color:var(--text); font-size:24px; cursor:pointer; padding:8px}
+  @media(max-width:760px){
+    .nav-toggle{display:block}
+    .nav-links{
+      position:absolute; top:62px; left:0; right:0; flex-direction:column; gap:0;
+      background:var(--bg); border-bottom:1px solid var(--line); display:none;
+    }
+    .nav-links.open{display:flex}
+    .nav-links a{display:block; padding:16px var(--pad); border-top:1px solid var(--line)}
+  }
+
+  /* ---------- 3. EINSTIEG ----------
+     Kompakt gehalten: wer scrollt, ist nach wenigen Sekunden bei den Filmen. */
+  .intro{
+    position:relative; overflow:hidden;
+    padding:clamp(52px,8vw,88px) 0 clamp(44px,6vw,68px);
+  }
+  .intro::before{content:none}
+  .intro .wrap{position:relative; z-index:1}
+  .intro h1{font-size:clamp(34px,6.2vw,58px); letter-spacing:-.03em}
+  .role{
+    color:var(--muted); font-size:clamp(15px,1.8vw,18px);
+    margin:12px 0 0; font-weight:500;
+  }
+  .intro-text{margin-top:30px; max-width:64ch}
+  .intro-text p{color:var(--muted); font-size:clamp(16px,1.8vw,18px); margin:0}
+  .intro-text p + p{margin-top:16px}
+  .intro-text strong{color:var(--text); font-weight:500}
+
+  .cta-row{display:flex; flex-wrap:wrap; gap:14px; margin-top:34px}
+  .btn{
+    display:inline-block; padding:14px 28px; border-radius:2px; text-decoration:none;
+    font-size:15px; font-weight:500; transition:all .2s; border:1px solid transparent;
+  }
+  .btn{border-radius:999px; font-size:12px; letter-spacing:.13em; text-transform:uppercase; font-weight:600}
+  .btn-primary{background:var(--text); color:#000}
+  .btn-primary:hover{background:#fff}
+  .btn-ghost{border-color:#2a2a2e; color:var(--text)}
+  .btn-ghost:hover{border-color:var(--text)}
+
+  /* ---------- 4. AWARD-LEISTE ---------- */
+  .awards{padding:20px 0 0; background:var(--bg)}
+  .awards ul{
+    list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap;
+    gap:14px 44px; justify-content:center;
+    font-size:12.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted);
+  }
+  .awards b{color:var(--text); font-weight:600}
+
+  /* ---------- 5. PORTFOLIO-GRID ---------- */
+  .grid{
+    display:grid; gap:23px; margin-top:30px;
+    grid-template-columns:repeat(auto-fill,minmax(min(100%,430px),1fr));
+  }
+  /* ---------- FILTER-LEISTE ----------
+     Kategorie ändern: unten im HTML data-cat der Kachel anpassen und
+     den passenden Knopf hier in der Leiste ergänzen. */
+  .filters{
+    display:flex; flex-wrap:wrap; gap:6px 28px; margin-top:30px;
+  }
+  .filters button{
+    font:inherit; font-size:11.5px; font-weight:600;
+    letter-spacing:.14em; text-transform:uppercase;
+    color:var(--muted); background:none; cursor:pointer;
+    border:0; border-bottom:1px solid transparent; border-radius:0;
+    padding:4px 0; transition:color .2s, border-color .2s;
+  }
+  .filters button:hover{color:var(--text)}
+  .filters button[aria-pressed="true"]{color:var(--text); border-bottom-color:var(--text)}
+  .card.hide{display:none}
+
+  .card{background:none; border:0; overflow:visible}
+  /* Doppelt breite Kachel — für den Showcase mit mehreren Videos. */
+  @media(min-width:900px){ .card-wide{grid-column:span 2} }
+  .card-body{padding:13px 2px 0}
+  .card-body h3{
+    font-size:13.5px; font-weight:700; letter-spacing:.09em;
+    text-transform:uppercase; margin-bottom:3px; color:var(--text);
+  }
+  .meta{font-size:13.5px; font-style:italic; color:var(--muted); line-height:1.45}
+  /* Kategorie-Kürzel entfällt, das macht jetzt die Filterleiste. */
+  .tag{display:none}
+
+  /* ---------- 6. VIDEO-KACHEL ----------
+     Der Vimeo-Player wird erst geladen, wenn die Kachel in Sichtweite kommt.
+     Video tauschen: einfach die Adresse in data-src ändern. */
+  .player{
+    aspect-ratio:16/9; background:#0b0b0d; position:relative;
+    border-radius:var(--radius); overflow:hidden;
+  }
+  .player iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+  .player::after{
+    content:""; position:absolute; inset:0; margin:auto;
+    width:40px; height:40px; border-radius:50%;
+    border:1px solid rgba(218,215,212,.16);
+    transition:opacity .3s;
+  }
+  .player.loaded::after{opacity:0}
+
+  /* ---------- 7. LAUFENDE PRODUKTIONEN ---------- */
+  .card-wip .wip{
+    aspect-ratio:16/9; display:grid; place-items:center;
+    border-radius:var(--radius);
+    background:linear-gradient(135deg,#131316,#08080a);
+  }
+  .wip-badge{
+    font-size:10.5px; letter-spacing:.18em; text-transform:uppercase; font-weight:600;
+    color:var(--muted); border:1px solid #26262a;
+    padding:7px 16px; border-radius:999px;
+  }
+
+  /* ---------- 8. LEISTUNGEN ---------- */
+  .services{display:grid; gap:2px; margin-top:52px; background:var(--line)}
+  @media(min-width:820px){.services{grid-template-columns:repeat(2,1fr)}}
+  .service{background:var(--bg); padding:34px 30px}
+  .service h3{font-size:19px; margin-bottom:10px}
+  .service p{color:var(--muted); margin:0; font-size:15.5px}
+  .service .num{
+    display:block; font-size:12px; color:var(--accent);
+    letter-spacing:.15em; margin-bottom:14px; font-weight:600;
+  }
+
+  /* ---------- 9. ÜBER ---------- */
+  .about-grid{display:grid; gap:48px; margin-top:44px}
+  @media(min-width:900px){.about-grid{grid-template-columns:1.25fr .75fr; gap:72px}}
+  .about-text p{color:var(--muted); max-width:60ch}
+  .about-text p + p{margin-top:20px}
+  .facts{list-style:none; margin:0; padding:0; border-top:1px solid var(--line)}
+  .facts li{
+    padding:16px 0; border-bottom:1px solid var(--line);
+    display:flex; justify-content:space-between; gap:20px; font-size:15px;
+  }
+  .facts span:first-child{color:var(--muted)}
+  .facts span:last-child{text-align:right}
+
+  /* ---------- 10. KONTAKT ---------- */
+  .contact{text-align:center}
+  .contact h2{max-width:20ch; margin-inline:auto}
+  .contact .lead{margin:18px auto 0}
+  .contact-links{
+    display:flex; flex-wrap:wrap; gap:12px 40px; justify-content:center;
+    margin-top:44px; font-size:16px;
+  }
+  .contact-links a{
+    text-decoration:none; border-bottom:1px solid rgba(218,215,212,.35);
+    padding-bottom:3px; transition:color .2s, border-color .2s;
+  }
+  .contact-links a:hover{color:var(--accent); border-color:var(--accent)}
+
+  footer{
+    border-top:1px solid var(--line); padding:30px 0;
+    font-size:13px; color:var(--muted);
+    display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between;
+  }
+
+  /* Sanftes Einblenden beim Scrollen */
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1; transform:none}
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1; transform:none; transition:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo">Patrick Hoffmann<span>.</span></a>
+    <button class="nav-toggle" aria-label="Menü" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ================= EINSTIEG ================= -->
+<section class="intro" id="top">
+  <div class="wrap">
+    <p class="eyebrow">Dubai · United Arab Emirates</p>
+    <h1>Patrick Hoffmann</h1>
+    <p class="role">Writer, Director &amp; Creative Producer</p>
+
+    <div class="intro-text">
+      <p>
+        Ten years making films, the last five leading productions end to end.
+        Agency-level campaigns for <strong>P&amp;G, Garmin and HELLA</strong> in Germany,
+        and documentary work in the UAE for <strong>ALEC</strong> on the Khazna Data Center,
+        the Wynn Al Marjan Resort and Sphere.
+      </p>
+      <p>
+        What I bring to a team is the combination that is hard to hire for. Creative direction
+        on one side, and on the other the production discipline that actually gets films
+        delivered. Budgets, permits, stakeholder alignment, shooting inside restricted sites,
+        and a camera in my own hands when the schedule demands it.
+      </p>
+      <p>
+        <strong>Based in Dubai. Open to senior roles where both halves get used.</strong>
+      </p>
+    </div>
+
+    <div class="cta-row">
+      <a href="#work" class="btn btn-primary">See the work</a>
+      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<div class="awards">
+  <div class="wrap">
+    <ul>
+      <li><b>NYX</b> Grand Award for Directing</li>
+      <li><b>World Media Festival</b> Gold ×2</li>
+      <li><b>Cannes Corporate</b> Finalist</li>
+      <li><b>10+ Years</b> Behind the Camera</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ================= WORK ================= -->
+<section id="work">
+  <div class="wrap">
+    <p class="eyebrow reveal">Selected Work</p>
+    <h2 class="reveal">Films that hold up when the stakes are real.</h2>
+    <p class="lead reveal">
+      From large-scale construction documentaries in the UAE to global campaigns
+      for Fortune 500 brands.
+    </p>
+
+    <!-- ============================================================
+         FILTER-LEISTE
+         Jede Kachel unten trägt ein data-cat. Der Knopf filtert danach.
+         Neue Kategorie: hier einen Knopf ergänzen und bei den Kacheln
+         dasselbe Kürzel in data-cat eintragen.
+         ============================================================ -->
+    <div class="filters reveal" id="filters">
+      <button type="button" data-filter="all" aria-pressed="true">All work</button>
+      <button type="button" data-filter="corporate" aria-pressed="false">Corporate</button>
+      <button type="button" data-filter="documentary" aria-pressed="false">Documentary</button>
+      <button type="button" data-filter="education" aria-pressed="false">Education</button>
+      <button type="button" data-filter="commercial" aria-pressed="false">Commercial</button>
+      <button type="button" data-filter="dubai" aria-pressed="false">Dubai</button>
+    </div>
+
+    <!-- ============================================================
+         SO TAUSCHST DU EIN VIDEO:
+         In data-src die Adresse ändern. Aufbau:
+         https://player.vimeo.com/video/VIDEO-NUMMER?h=CODE&title=0&byline=0&portrait=0&dnt=1
+         Video-Nummer und Code findest du in Vimeo unter "Teilen → Einbetten".
+         ============================================================ -->
+    <div class="grid" id="workGrid">
+
+      <!-- --- Laufende Produktionen (ALEC, UAE) --- -->
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <article class="card reveal" data-cat="documentary">
+        <div class="player" data-src="https://player.vimeo.com/video/1219015438?h=c820be0333&title=0&byline=0&portrait=0&dnt=1" data-title="UDO! — Trailer"></div>
+        <div class="card-body">
+          <span class="tag">Documentary</span>
+          <h3>UDO!</h3>
+          <p class="meta">Trailer · Gold, Documentary · Creative Producer</p>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="commercial">
+        <div class="player" data-src="https://player.vimeo.com/video/1219016721?h=17ff8b09bd&title=0&byline=0&portrait=0&dnt=1" data-title="P&amp;G Ariel — Cold Calls"></div>
+        <div class="card-body">
+          <span class="tag">Brand Film</span>
+          <h3>P&amp;G · Ariel</h3>
+          <p class="meta">Gold, World Media Festival · Writer / Director</p>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="commercial">
+        <div class="player" data-src="https://player.vimeo.com/video/1219016268?title=0&byline=0&portrait=0&dnt=1" data-title="P&amp;G Ariel — Turn It Down, TVC 1"></div>
+        <div class="card-body">
+          <span class="tag">Brand Film</span>
+          <h3>P&amp;G · Ariel</h3>
+          <p class="meta">Turn It Down, TVC 1 · Writer / Director</p>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="commercial">
+        <div class="player" data-src="https://player.vimeo.com/video/1219016230?title=0&byline=0&portrait=0&dnt=1" data-title="P&amp;G Ariel — Turn It Down, TVC 2"></div>
+        <div class="card-body">
+          <span class="tag">Brand Film</span>
+          <h3>P&amp;G · Ariel</h3>
+          <p class="meta">Turn It Down, TVC 2 · Writer / Director</p>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="commercial">
+        <div class="player" data-src="https://player.vimeo.com/video/1219012992?h=8f929a4345&title=0&byline=0&portrait=0&dnt=1" data-title="Cloud of Legacy — Peace of Mind"></div>
+        <div class="card-body">
+          <span class="tag">Brand Film</span>
+          <h3>Cloud of Legacy</h3>
+          <p class="meta">Peace of Mind, English · Cannes Corporate Finalist · Writer / Director</p>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="commercial">
+        <div class="player" data-src="https://player.vimeo.com/video/1219012575?title=0&byline=0&portrait=0&dnt=1" data-title="Cloud of Legacy — Peace of Mind (DE)"></div>
+        <div class="card-body">
+          <span class="tag">Brand Film</span>
+          <h3>Cloud of Legacy</h3>
+          <p class="meta">Peace of Mind, German · Writer / Director</p>
+        </div>
+      </article>
+
+      <!-- Vimeo-Showcase mit allen 12 Clips der Kampagne, kein einzelnes Video.
+           Deshalb card-wide: die Galerie braucht mehr Platz als eine Kachel.
+           PRÜFEN: Gehört der Silver Award (Social Media Campaign) zu dieser
+           Kampagne? Falls ja, unten in .meta ergänzen. -->
+      <article class="card card-wide reveal" data-cat="commercial">
+        <div class="player" data-src="https://vimeo.com/showcase/12371360/embed" data-title="HELLA — We Got That 2.0, social media campaign"></div>
+        <div class="card-body">
+          <span class="tag">Social Campaign</span>
+          <h3>HELLA · We Got That 2.0</h3>
+          <p class="meta">Social media campaign, 12 films · Writer / Director</p>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="commercial">
+        <div class="player" data-src="https://player.vimeo.com/video/1219016846?h=fc1aff3053&title=0&byline=0&portrait=0&dnt=1" data-title="Garmin — MARQ 2 Launchfilm"></div>
+        <div class="card-body">
+          <span class="tag">Brand Film</span>
+          <h3>Garmin</h3>
+          <p class="meta">MARQ 2 launch film · Producer</p>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="corporate">
+        <div class="player" data-src="https://player.vimeo.com/video/1219014313?h=ad78cbb09c&title=0&byline=0&portrait=0&dnt=1" data-title="MEILLER — The Hercules Quest"></div>
+        <div class="card-body">
+          <span class="tag">Brand Film</span>
+          <h3>MEILLER</h3>
+          <p class="meta">The Hercules Quest · Writer / Director</p>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="corporate">
+        <div class="player" data-src="https://player.vimeo.com/video/1219015822?h=d985e9c047&title=0&byline=0&portrait=0&dnt=1" data-title="Swissbit — From Berlin to the World"></div>
+        <div class="card-body">
+          <span class="tag">Corporate</span>
+          <h3>Swissbit</h3>
+          <p class="meta">From Berlin to the World · Writer / Director</p>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="education">
+        <div class="player" data-src="https://player.vimeo.com/video/1219014272?h=5cd5b185a2&title=0&byline=0&portrait=0&dnt=1" data-title="St George's School — Image film"></div>
+        <div class="card-body">
+          <span class="tag">Image Film</span>
+          <h3>St. George's School</h3>
+          <p class="meta">Image film &amp; portraits · Producer</p>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="education">
+        <div class="player" data-src="https://player.vimeo.com/video/1219013612?h=be38a6181b&title=0&byline=0&portrait=0&dnt=1" data-title="Munich International School — The M-Story"></div>
+        <div class="card-body">
+          <span class="tag">Image Film</span>
+          <h3>Munich International School</h3>
+          <p class="meta">The M-Story · Writer / Director</p>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="corporate">
+        <div class="player" data-src="https://player.vimeo.com/video/1219013030?h=55d38fc5af&title=0&byline=0&portrait=0&dnt=1" data-title="Caparol — The Real Innovators"></div>
+        <div class="card-body">
+          <span class="tag">Brand Film</span>
+          <h3>Caparol</h3>
+          <p class="meta">The Real Innovators · Producer</p>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="commercial">
+        <div class="player" data-src="https://player.vimeo.com/video/1219013317?title=0&byline=0&portrait=0&dnt=1" data-title="Caparol — Paint Buddy, launch film"></div>
+        <div class="card-body">
+          <span class="tag">Brand Film</span>
+          <h3>Caparol</h3>
+          <p class="meta">Paint Buddy, launch film · Creative Producer</p>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="commercial">
+        <div class="player" data-src="https://player.vimeo.com/video/1219013166?title=0&byline=0&portrait=0&dnt=1" data-title="Caparol — Paint Buddy, brand spot"></div>
+        <div class="card-body">
+          <span class="tag">Brand Film</span>
+          <h3>Caparol</h3>
+          <p class="meta">Paint Buddy, brand spot · Writer / Director</p>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="commercial">
+        <div class="player" data-src="https://player.vimeo.com/video/1219015844?h=c3bc2517be&title=0&byline=0&portrait=0&dnt=1" data-title="P&amp;G Always Discreet — Unverblümt"></div>
+        <div class="card-body">
+          <span class="tag">Brand Film</span>
+          <h3>P&amp;G · Always Discreet</h3>
+          <p class="meta">Unverblümt · Writer / Director</p>
+        </div>
+      </article>
+
+      <!-- Einziger Film ohne Buch-Credit — hier nur Regie. -->
+      <article class="card reveal" data-cat="commercial">
+        <div class="player" data-src="https://player.vimeo.com/video/1219011899?h=b6ac2402c6&title=0&byline=0&portrait=0&dnt=1" data-title="Terra Canis — Smells Like Homemade"></div>
+        <div class="card-body">
+          <span class="tag">Brand Film</span>
+          <h3>Terra Canis</h3>
+          <p class="meta">Smells Like Homemade · Director</p>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="documentary">
+        <div class="player" data-src="https://player.vimeo.com/video/1219012377?h=798503084a&title=0&byline=0&portrait=0&dnt=1" data-title="Edita Kadiric — Cocoon, art exhibition"></div>
+        <div class="card-body">
+          <span class="tag">Exhibition Film</span>
+          <h3>Edita Kadiric</h3>
+          <p class="meta">Cocoon, art exhibition · Camera</p>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="documentary">
+        <div class="player" data-src="https://player.vimeo.com/video/1219012047?h=fe2d56c58d&title=0&byline=0&portrait=0&dnt=1" data-title="Dirk Salz — Portrait of an Artist"></div>
+        <div class="card-body">
+          <span class="tag">Portrait</span>
+          <h3>Dirk Salz</h3>
+          <p class="meta">Portrait of an artist · Producer</p>
+        </div>
+      </article>
+
+      <!-- ============ DUBAI ============
+           Eigener Filter-Knopf "Dubai". Reihenfolge: AO, ALEC in Development,
+           NOOR Energy, Dubai Holding. Kacheln tragen zwei Kategorien, damit sie
+           auch in Documentary bzw. Commercial auftauchen.
+           AO-Showcase bearbeiten: vimeo.com/showcase/12412297 -->
+
+      <article class="card card-wide reveal" data-cat="dubai commercial">
+        <div class="player" data-src="https://vimeo.com/showcase/12412297/embed" data-title="AO — Drone Shows, Dubai"></div>
+        <div class="card-body">
+          <span class="tag">Drone Shows</span>
+          <h3>AO · Drone Shows</h3>
+          <p class="meta">Dubai Shopping Festival, Sheikh Zayed Festival, DAMAC &amp; Red Bull · Producer</p>
+        </div>
+      </article>
+
+      <article class="card card-wip reveal" data-cat="dubai documentary">
+        <div class="wip"><span class="wip-badge">In Production</span></div>
+        <div class="card-body">
+          <span class="tag">Documentary</span>
+          <h3>Khazna Data Center</h3>
+          <p class="meta">ALEC · Abu Dhabi · Creative Producer</p>
+        </div>
+      </article>
+
+      <article class="card card-wip reveal" data-cat="dubai documentary">
+        <div class="wip"><span class="wip-badge">In Production</span></div>
+        <div class="card-body">
+          <span class="tag">Documentary</span>
+          <h3>Wynn Al Marjan Resort</h3>
+          <p class="meta">ALEC · Ras Al Khaimah · Creative Producer</p>
+        </div>
+      </article>
+
+      <article class="card card-wip reveal" data-cat="dubai documentary">
+        <div class="wip"><span class="wip-badge">In Production</span></div>
+        <div class="card-body">
+          <span class="tag">Documentary</span>
+          <h3>Sphere</h3>
+          <p class="meta">Abu Dhabi · Creative Producer</p>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="dubai commercial">
+        <div class="player" data-src="https://player.vimeo.com/video/1227451162?title=0&byline=0&portrait=0&dnt=1" data-title="NOOR Energy 1 — UAE National Day"></div>
+        <div class="card-body">
+          <span class="tag">Brand Film</span>
+          <h3>NOOR Energy 1</h3>
+          <p class="meta">UAE National Day film · Producer</p>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="dubai documentary">
+        <div class="player" data-src="https://player.vimeo.com/video/1227451159?title=0&byline=0&portrait=0&dnt=1" data-title="Dubai Holding — National Day, behind the scenes"></div>
+        <div class="card-body">
+          <span class="tag">Behind the Scenes</span>
+          <h3>Dubai Holding</h3>
+          <p class="meta">National Day film, behind the scenes · BTS Camera</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services">
+  <div class="wrap">
+    <p class="eyebrow reveal">What I do</p>
+    <h2 class="reveal">Four things, done properly.</h2>
+    <p class="lead reveal">
+      Concept to final grade. One point of contact, no handover losses.
+    </p>
+
+    <div class="services">
+      <div class="service reveal">
+        <span class="num">01</span>
+        <h3>Brand &amp; Image Films</h3>
+        <p>Films that carry a brand rather than describe it, for companies, developers, schools and cultural institutions. Treatment, production, direction, delivery.</p>
+      </div>
+      <div class="service reveal">
+        <span class="num">02</span>
+        <h3>Documentary</h3>
+        <p>Long-form and short-form documentary in demanding environments: active construction sites, high-security facilities, multi-stakeholder projects.</p>
+      </div>
+      <div class="service reveal">
+        <span class="num">03</span>
+        <h3>Self-Shooting Direction</h3>
+        <p>Trained camera operator with professional kit. Small footprint, fast turnaround, no waiting on a crew for interviews, portraits and reactive shoots.</p>
+      </div>
+      <div class="service reveal">
+        <span class="num">04</span>
+        <h3>Creative Production</h3>
+        <p>Budgets, scheduling, permits, stakeholder alignment. Plus a vetted network of senior DOPs and editors, assembled in days when a project needs scale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap">
+    <p class="eyebrow reveal">About</p>
+    <h2 class="reveal">I started behind the camera. I never left.</h2>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          I began over ten years ago as a camera assistant on feature films. That is why
+          direction and logistics have never been two separate jobs to me. I learned both
+          from the floor up, and I still shoot when a project is better served by one person
+          than by five.
+        </p>
+        <p>
+          In practice that means fewer handovers and faster decisions. Treatment, budget,
+          schedule, permits, direction, delivery: one point of contact from the first call to
+          the final grade. When a project needs scale, I bring in a vetted network of senior
+          DOPs and editors within days.
+        </p>
+        <p>
+          I also work with AI tools in production, generative video and image as well as
+          workflow automation, to save time and budget without losing craft.
+        </p>
+      </div>
+
+      <div class="reveal">
+        <ul class="facts">
+          <li><span>Based in</span><span>Dubai, UAE</span></li>
+          <li><span>Languages</span><span>German, English</span></li>
+          <li><span>Education</span><span>BA Film &amp; TV, Cinematography</span></li>
+          <li><span>Kit</span><span>Own professional camera package</span></li>
+          <li><span>Works in</span><span>UAE &amp; Europe</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <p class="eyebrow reveal">Contact</p>
+    <h2 class="reveal">Let's talk.</h2>
+    <p class="lead reveal">
+      Whether it is a role or a project, write me a few lines about what you need
+      and when. You get a straight answer.
+    </p>
+    <div class="contact-links reveal">
+      <a href="mailto:patrick.hoffmann@tcbcreation.com">patrick.hoffmann@tcbcreation.com</a>
+      <a href="tel:+971588129685">+971 58 812 9685</a>
+      <a href="tel:+4915775372564">+49 157 75372564</a>
+      <!-- PRÜFEN: LinkedIn-Adresse -->
+      <a href="https://www.linkedin.com/in/patrick-m-hoffmann" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;width:100%">
+    <span>© <span id="yr"></span> Patrick Hoffmann · Dubai</span>
+    <span>Creative Producer &amp; Director</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* --- Einblenden beim Scrollen --- */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  /* --- Mobile Menü schließt nach Klick --- */
+  document.querySelectorAll('.nav-links a').forEach(function(a){
+    a.addEventListener('click', function(){ document.querySelector('.nav-links').classList.remove('open'); });
+  });
+
+  /* --- Filter nach Branche ---
+         Blendet Kacheln aus, die nicht zur gewählten Kategorie gehören. */
+  (function(){
+    var bar = document.getElementById('filters');
+    if(!bar) return;
+    var cards = Array.prototype.slice.call(document.querySelectorAll('#workGrid .card'));
+    bar.addEventListener('click', function(ev){
+      var btn = ev.target.closest('button[data-filter]');
+      if(!btn) return;
+      var cat = btn.getAttribute('data-filter');
+      bar.querySelectorAll('button').forEach(function(b){
+        b.setAttribute('aria-pressed', String(b === btn));
+      });
+      cards.forEach(function(c){
+        var cats = (c.getAttribute('data-cat') || '').split(/\s+/);
+        var show = (cat === 'all') || (cats.indexOf(cat) !== -1);
+        c.classList.toggle('hide', !show);
+        /* Gefilterte Kacheln sofort sichtbar machen — sie haben die
+           Einblende-Animation sonst evtl. schon hinter sich. */
+        if(show) c.classList.add('in');
+      });
+    });
+  })();
+
+  /* --- Vimeo-Player erst laden, wenn die Kachel in Sichtweite kommt.
+         Hält die Seite schnell, auch mit vielen Videos. --- */
+  var vio = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var box = e.target, src = box.getAttribute('data-src');
+      vio.unobserve(box);
+      if(!src) return;
+      var f = document.createElement('iframe');
+      f.src = src;
+      f.title = box.getAttribute('data-title') || 'Video';
+      f.loading = 'lazy';
+      f.allow = 'fullscreen; picture-in-picture';
+      f.setAttribute('allowfullscreen','');
+      box.appendChild(f);
+      box.classList.add('loaded');
+    });
+  }, {rootMargin:'400px 0px'});
+  document.querySelectorAll('.player').forEach(function(el){ vio.observe(el); });
+</script>
+
+</body>
+</html>
